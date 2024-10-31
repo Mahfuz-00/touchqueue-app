@@ -116,8 +116,8 @@ class Confirmation extends StatelessWidget {
                     value: 'logout',
                     child: Row(
                       children: [
-                        Icon(Icons.logout, color: Colors.black), // Logout icon
-                        SizedBox(width: 8), // Add some space between icon and text
+                        Icon(Icons.logout, color: Colors.black),
+                        SizedBox(width: 8),
                         Text(
                           'Logout',
                           style: TextStyle(
