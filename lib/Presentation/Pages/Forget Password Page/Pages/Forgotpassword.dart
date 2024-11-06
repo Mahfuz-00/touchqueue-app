@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:footer/footer.dart';
-import '../../../../Core/Connection Checker/internetconnectioncheck.dart';
+import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
+import '../../../../Common/Widgets/internetconnectioncheck.dart';
 import '../../Login Page/Page/Login.dart';
 import 'OTPVerfication.dart';
 
@@ -79,7 +80,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.background,
               image: DecorationImage(
-                image: AssetImage('Assets/Images/bg_light.png'),
+                image: AssetImage(AppImages.LightBG),
                 fit: BoxFit.cover, // Use BoxFit.cover to cover the entire screen
               ),
             ),
@@ -125,7 +126,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                         child: Column(
                           children: [
                             Image(
-                              image: AssetImage('Assets/Images/Logo_Large.png'), height: 100, width: 300,),
+                              image: AssetImage(AppImages.LargeLogo), height: 100, width: 300,),
                             SizedBox(
                               height: 20,
                             ),

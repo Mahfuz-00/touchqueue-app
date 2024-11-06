@@ -1,8 +1,9 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:footer/footer.dart';
+import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
 import 'package:touchqueue_app/Presentation/Pages/Register%20Page/Pages/registered.dart';
-import '../../../../Core/Connection Checker/internetconnectioncheck.dart';
+import '../../../../Common/Widgets/internetconnectioncheck.dart';
 import '../Widgets/CustomBox.dart';
 
 class OTPVerification extends StatefulWidget {
@@ -108,7 +109,7 @@ class _OTPVerificationState extends State<OTPVerification> {
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.background,
                 image: DecorationImage(
-                  image: AssetImage('Assets/Images/bg_light.png'),
+                  image: AssetImage(AppImages.LightBG),
                   fit: BoxFit.cover, // Use BoxFit.cover to cover the entire screen
                 ),
               ),
@@ -156,7 +157,9 @@ class _OTPVerificationState extends State<OTPVerification> {
                           child: Column(
                             children: [
                               Image(
-                                image: AssetImage('Assets/Images/Logo_Large.png'), height: 100, width: 300,),
+                                image: AssetImage(AppImages.LargeLogo),
+                                height: 100,
+                                width: 300,),
                               SizedBox(
                                 height: 20,
                               ),
@@ -212,7 +215,7 @@ class _OTPVerificationState extends State<OTPVerification> {
                               ),
                               ElevatedButton(
                                   onPressed: () async {
-                                    Navigator.push(
+                                    Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(builder: (context) => Registered()),
                                     );

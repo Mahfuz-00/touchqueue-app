@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:touchqueue_app/Presentation/Pages/Password%20Change%20Page/Pages/ChangePassword.dart';
+import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
+import 'package:touchqueue_app/Presentation/Pages/Password%20Change%20Page/Pages/AccountChangePassword.dart';
 
 import '../../../../Common/Widgets/CustomButton.dart';
+import '../../History Page/Page/History.dart';
 import '../../Login Page/Page/Login.dart';
 
 class Profile extends StatelessWidget {
@@ -47,11 +49,10 @@ class Profile extends StatelessWidget {
               ),
               onSelected: (value) {
                if (value == 'history') {
-                  // Navigate to History page
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => HistoryPage()),
-                  // );
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) => History(type: 'Doctor Appointment - ID: 23456',)),
+                 );
                 } else if (value == 'logout') {
                   Navigator.push(
                     context,
@@ -112,7 +113,7 @@ class Profile extends StatelessWidget {
           decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.background,
             image: DecorationImage(
-              image: AssetImage('Assets/Images/bg_light.png'),
+              image: AssetImage(AppImages.LightBG),
               fit: BoxFit.cover,
             ),
           ),
@@ -121,7 +122,7 @@ class Profile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image(
-                image: AssetImage('Assets/Images/Logo_Large.png'),
+                image: AssetImage(AppImages.LargeLogo),
                 height: 100,
                 width: 300,
               ),
@@ -157,10 +158,10 @@ class Profile extends StatelessWidget {
               CustomButton(
                 text: 'Change Password',
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const ChangePassword()),
+                        builder: (context) => const AccountChangePassword()),
                   );
                 },
               ),

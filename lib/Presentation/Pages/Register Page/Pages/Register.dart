@@ -2,8 +2,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:footer/footer.dart';
+import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
 import 'package:touchqueue_app/Presentation/Pages/Register%20Page/Pages/OTPVerfication.dart';
-import '../../../../Core/Connection Checker/internetconnectioncheck.dart';
+import '../../../../Common/Widgets/internetconnectioncheck.dart';
 import '../../Login Page/Page/Login.dart';
 import '../Widgets/CustomField.dart';
 
@@ -70,7 +71,7 @@ class _RegisterState extends State<Register> {
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.background,
                 image: DecorationImage(
-                  image: AssetImage('Assets/Images/bg_light.png'),
+                  image: AssetImage(AppImages.LightBG),
                   fit: BoxFit.cover, // Use BoxFit.cover to cover the entire screen
                 ),
               ),
@@ -82,7 +83,7 @@ class _RegisterState extends State<Register> {
                     Center(
                         child: Column(children: [
                           Image(
-                            image: AssetImage('Assets/Images/Logo_Large.png'),
+                            image: AssetImage(AppImages.LargeLogo),
                             height: 100,
                             width: 300,
                           ),

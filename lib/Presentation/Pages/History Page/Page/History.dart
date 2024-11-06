@@ -6,14 +6,14 @@ import 'package:touchqueue_app/Common/Widgets/internetconnectioncheck.dart';
 import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
 import 'package:touchqueue_app/Presentation/Pages/Comfimation%20Page/Widgets/TitleNameTemplate.dart';
 
-import '../../History Page/Page/History.dart';
 import '../../Login Page/Page/Login.dart';
 import '../../Profile Page/Page/Profile.dart';
+import '../Widget/TileTemplate.dart';
 
-class Confirmation extends StatelessWidget {
+class History extends StatelessWidget {
   final String type;
 
-  const Confirmation({Key? key, required this.type}) : super(key: key);
+  const History({Key? key, required this.type}) : super(key: key);
 
   String _generateRandomId() {
     final random = Random();
@@ -67,11 +67,6 @@ class Confirmation extends StatelessWidget {
                       context,
                       MaterialPageRoute(builder: (context) => Profile()),
                     );
-                  } else if (value == 'history') {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => History(type: type,)),
-                    );
                   } else if (value == 'logout') {
                     Navigator.push(
                       context,
@@ -89,23 +84,6 @@ class Confirmation extends StatelessWidget {
                           SizedBox(width: 8), // Add some space between icon and text
                           Text(
                             'Profile',
-                            style: TextStyle(
-                              fontFamily: 'default',
-                              fontSize: 16,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    PopupMenuItem(
-                      value: 'history',
-                      child: Row(
-                        children: [
-                          Icon(Icons.history, color: Colors.black), // History icon
-                          SizedBox(width: 8), // Add some space between icon and text
-                          Text(
-                            'History',
                             style: TextStyle(
                               fontFamily: 'default',
                               fontSize: 16,
@@ -140,83 +118,69 @@ class Confirmation extends StatelessWidget {
           ],
         ),
         body: SafeArea(
-          child: Container(
-            padding: EdgeInsets.all(20),
-            decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.background,
-              image: DecorationImage(
-                image: AssetImage(AppImages.LightBG),
-                fit: BoxFit.cover,
+          child: SingleChildScrollView(
+            child: Container(
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.background,
+                image: DecorationImage(
+                  image: AssetImage(AppImages.LightBG),
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
-            child: Column(
-              children: [
-                Image(
-                  image: AssetImage(AppImages.LargeLogo),
-                  height: 100,
-                  width: 300,
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  'Visitor',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.onPrimary,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'default',
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage(AppImages.LargeLogo),
+                    height: 100,
+                    width: 300,
                   ),
-                ),
-                const SizedBox(height: 5),
-                Text(
-                  'Self Check-in',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.onPrimary,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'default',
+                  SizedBox(
+                    height: 20,
                   ),
-                ),
-                const SizedBox(height: 30),
-                QrImageView(
-                  data: qrData,
-                  version: QrVersions.auto,
-                  size: 200.0,
-                ),
-                Text(
-                  'Scan QR Code at the location to self check-in',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.onPrimary,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'default',
+                  VisitorTokenTile(
+                    qrData: qrData,
+                    tokenNo: qrData,
+                    counterNo: '3',
+                    timeanddate: '12:30 PM, 24-06-2024',
                   ),
-                ),
-                SizedBox(
-                  height: 25,
-                ),
-                TitleNameWidget(title: 'Token No.', name: qrData),
-                TitleNameWidget(title: 'Counter No', name: '3'),
-                TitleNameWidget(title: 'Est. Time', name: '12:30 PM'),
-                TitleNameWidget(title: 'People in Queue', name: '23'),
-                TitleNameWidget(
-                    title: 'Location', name: 'House-32, Mirpur D.O.H.S, Dhaka'),
-                SizedBox(height: 30),
-                Text(
-                  'Thank You for Visiting ore Establishment. Stay Safe, Stay Healthy',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.onPrimary,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'default',
+                  SizedBox(height: 10,),
+                  VisitorTokenTile(
+                    qrData: qrData,
+                    tokenNo: qrData,
+                    counterNo: '3',
+                    timeanddate: '12:30 PM, 24-06-2024',
                   ),
-                ),
-              ],
+                  SizedBox(height: 10,),
+                  VisitorTokenTile(
+                    qrData: qrData,
+                    tokenNo: qrData,
+                    counterNo: '3',
+                    timeanddate: '12:30 PM, 24-06-2024',
+                  ),
+                  SizedBox(height: 10,),
+                  VisitorTokenTile(
+                    qrData: qrData,
+                    tokenNo: qrData,
+                    counterNo: '3',
+                    timeanddate: '12:30 PM, 24-06-2024',
+                  ),
+                  SizedBox(height: 10,),
+                  VisitorTokenTile(
+                    qrData: qrData,
+                    tokenNo: qrData,
+                    counterNo: '3',
+                    timeanddate: '12:30 PM, 24-06-2024',
+                  ),
+                  SizedBox(height: 10,),
+                  VisitorTokenTile(
+                    qrData: qrData,
+                    tokenNo: qrData,
+                    counterNo: '3',
+                    timeanddate: '12:30 PM, 24-06-2024',
+                  ),
+                ],
+              ),
             ),
           ),
         ),

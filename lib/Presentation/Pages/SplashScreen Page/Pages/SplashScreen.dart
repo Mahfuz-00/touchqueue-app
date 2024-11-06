@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
+import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
 
 import '../../Welcome Page/Page/Welcome.dart';
 
@@ -62,7 +63,7 @@ class _SplashScreenState extends State<SplashScreen>
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.background,
           image: DecorationImage(
-            image: AssetImage('Assets/Images/bg_light.png'),
+            image: AssetImage(AppImages.LightBG),
             fit: BoxFit.cover, // Use BoxFit.cover to cover the entire screen
           ),
         ),
@@ -71,7 +72,7 @@ class _SplashScreenState extends State<SplashScreen>
           children: [
             const Image(
               image: AssetImage(
-                'Assets/Images/Logo_Rec.png',
+                AppImages.RecLogo
               ),
               width: 500,
               height: 200,
@@ -95,7 +96,7 @@ class _SplashScreenState extends State<SplashScreen>
             Align(
               alignment: Alignment.bottomCenter,
               child: const Image(
-                image: AssetImage('Assets/Images/Powered by TNS.png'),
+                image: AssetImage(AppImages.TNSLogo),
                 height: 100,
                 width: 150,
                 alignment: Alignment.bottomCenter,

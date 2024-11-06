@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../Core/Connection Checker/internetconnectioncheck.dart';
+import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
+import '../../../../Common/Widgets/internetconnectioncheck.dart';
 import '../../Login Page/Page/Login.dart';
 
 class Registered extends StatefulWidget {
@@ -25,7 +26,7 @@ class _RegisteredState extends State<Registered> {
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.background,
               image: DecorationImage(
-                image: AssetImage('Assets/Images/bg_light.png'),
+                image: AssetImage(AppImages.LightBG),
                 fit: BoxFit.cover, // Use BoxFit.cover to cover the entire screen
               ),
             ),
@@ -35,7 +36,7 @@ class _RegisteredState extends State<Registered> {
                 children: [
                   Center(
                     child: Image(
-                      image: AssetImage('Assets/Images/Successmark.png'),
+                      image: AssetImage(AppImages.Successmark),
                       height: 150,
                       width: 150,
                       alignment: Alignment.center,
@@ -72,10 +73,9 @@ class _RegisteredState extends State<Registered> {
                     onPressed: () {
                       /*final emailCubit = EmailCubit();
                       emailCubit.clearEmail();*/
-                      Navigator.pushAndRemoveUntil(
+                      Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(builder: (context) => Login()),
-                        (route) => false,
                       );
                     },
                     style: ElevatedButton.styleFrom(

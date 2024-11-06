@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import '../../../../Core/Connection Checker/internetconnectioncheck.dart';
+import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
+import '../../../../Common/Widgets/internetconnectioncheck.dart';
 import '../../Profile Page/Page/Profile.dart';
 
-class PasswordChanged extends StatefulWidget {
-  const PasswordChanged({super.key});
+class AccountPasswordChanged extends StatefulWidget {
+  const AccountPasswordChanged({super.key});
 
   @override
-  State<PasswordChanged> createState() => _PasswordChangedState();
+  State<AccountPasswordChanged> createState() => _AccountPasswordChangedState();
 }
 
-class _PasswordChangedState extends State<PasswordChanged> {
+class _AccountPasswordChangedState extends State<AccountPasswordChanged> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -25,7 +26,7 @@ class _PasswordChangedState extends State<PasswordChanged> {
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.background,
               image: DecorationImage(
-                image: AssetImage('Assets/Images/bg_light.png'),
+                image: AssetImage(AppImages.LightBG),
                 fit: BoxFit.cover, // Use BoxFit.cover to cover the entire screen
               ),
             ),
@@ -35,7 +36,7 @@ class _PasswordChangedState extends State<PasswordChanged> {
                 children: [
                   Center(
                     child: Image(
-                      image: AssetImage('Assets/Images/Successmark.png'),
+                      image: AssetImage(AppImages.Successmark),
                       height: 150,
                       width: 150,
                       alignment: Alignment.center,
@@ -72,10 +73,9 @@ class _PasswordChangedState extends State<PasswordChanged> {
                     onPressed: () {
                       /*final emailCubit = EmailCubit();
                       emailCubit.clearEmail();*/
-                      Navigator.pushAndRemoveUntil(
+                      Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => Profile()),
-                        (route) => false,
+                        MaterialPageRoute(builder: (context) => const Profile()),
                       );
                     },
                     style: ElevatedButton.styleFrom(

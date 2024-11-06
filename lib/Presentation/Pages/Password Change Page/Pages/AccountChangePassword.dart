@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import '../../../../../Core/Connection Checker/internetconnectioncheck.dart';
-import '../../Forget Password Page/Pages/passwordchanged.dart';
+import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
+import '../../../../Common/Widgets/internetconnectioncheck.dart';
+import 'Accountpasswordchanged.dart';
 
-class ChangePassword extends StatefulWidget {
-  const ChangePassword({super.key});
+class AccountChangePassword extends StatefulWidget {
+  const AccountChangePassword({super.key});
 
   @override
-  State<ChangePassword> createState() => _ChangePasswordState();
+  State<AccountChangePassword> createState() => _AccountChangePasswordState();
 }
 
-class _ChangePasswordState extends State<ChangePassword> {
+class _AccountChangePasswordState extends State<AccountChangePassword> {
   bool _isLoading = true;
   late TextEditingController _oldPasswordcontroller = TextEditingController();
   late TextEditingController _newPasswordcontroller = TextEditingController();
@@ -31,7 +32,7 @@ class _ChangePasswordState extends State<ChangePassword> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       setState(() {
         _isLoading = false;
       });
@@ -71,7 +72,7 @@ class _ChangePasswordState extends State<ChangePassword> {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
     return _isLoading
-        ? Scaffold(
+        ? const Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         // Show circular loading indicator while waiting
@@ -87,8 +88,8 @@ class _ChangePasswordState extends State<ChangePassword> {
               height: double.infinity,
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.background,
-                image: DecorationImage(
-                  image: AssetImage('Assets/Images/bg_light.png'),
+                image: const DecorationImage(
+                  image: AssetImage(AppImages.LightBG),
                   fit: BoxFit.cover, // Use BoxFit.cover to cover the entire screen
                 ),
               ),
@@ -99,9 +100,9 @@ class _ChangePasswordState extends State<ChangePassword> {
                     Container(
                       alignment: Alignment.topLeft,
                       child: Padding(
-                        padding: EdgeInsets.only(left: 30),
+                        padding: const EdgeInsets.only(left: 30),
                         child: Container(
-                          padding: EdgeInsets.only(left: 8),
+                          padding: const EdgeInsets.only(left: 8),
                           decoration: BoxDecoration(
                             border: Border.all(
                                 width: 2,
@@ -119,7 +120,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Expanded(
@@ -127,9 +128,9 @@ class _ChangePasswordState extends State<ChangePassword> {
                         child: Container(
                           child: Column(
                             children: [
-                              Image(
-                                image: AssetImage('Assets/Images/Logo_Large.png'), height: 100, width: 300,),
-                              SizedBox(
+                              const Image(
+                                image: AssetImage(AppImages.LargeLogo), height: 100, width: 300,),
+                              const SizedBox(
                                 height: 20,
                               ),
                               Text(
@@ -142,13 +143,13 @@ class _ChangePasswordState extends State<ChangePassword> {
                                     fontFamily: 'default'),
                               ),
                               const SizedBox(height: 10),
-                              Padding(
-                                padding: const EdgeInsets.only(
+                              const Padding(
+                                padding: EdgeInsets.only(
                                     left: 30.0, right: 30.0),
                                 child: Text(
                                   'Please enter a new password. Your new password must be different from any of your previous password',
                                   textAlign: TextAlign.center,
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     color: Color.fromRGBO(143, 150, 158, 1),
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
@@ -172,10 +173,10 @@ class _ChangePasswordState extends State<ChangePassword> {
                                   decoration: InputDecoration(
                                     filled: true,
                                     fillColor:
-                                    Color.fromRGBO(247, 248, 250, 1),
-                                    border: OutlineInputBorder(),
-                                    labelText: 'Enter your new password',
-                                    labelStyle: TextStyle(
+                                    const Color.fromRGBO(247, 248, 250, 1),
+                                    border: const OutlineInputBorder(),
+                                    labelText: 'Enter your current password',
+                                    labelStyle: const TextStyle(
                                       color: Colors.black87,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
@@ -193,7 +194,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 10,),
+                              const SizedBox(height: 10,),
                               Container(
                                 width: screenWidth * 0.9,
                                 height: 70,
@@ -209,10 +210,10 @@ class _ChangePasswordState extends State<ChangePassword> {
                                   decoration: InputDecoration(
                                     filled: true,
                                     fillColor:
-                                    Color.fromRGBO(247, 248, 250, 1),
-                                    border: OutlineInputBorder(),
+                                    const Color.fromRGBO(247, 248, 250, 1),
+                                    border: const OutlineInputBorder(),
                                     labelText: 'Enter your new password',
-                                    labelStyle: TextStyle(
+                                    labelStyle: const TextStyle(
                                       color: Colors.black87,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
@@ -230,7 +231,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 10,),
+                              const SizedBox(height: 10,),
                               Container(
                                 width: screenWidth * 0.9,
                                 height: 70,
@@ -246,10 +247,10 @@ class _ChangePasswordState extends State<ChangePassword> {
                                   decoration: InputDecoration(
                                     filled: true,
                                     fillColor:
-                                    Color.fromRGBO(247, 248, 250, 1),
-                                    border: OutlineInputBorder(),
+                                    const Color.fromRGBO(247, 248, 250, 1),
+                                    border: const OutlineInputBorder(),
                                     labelText: 'Confirm new password',
-                                    labelStyle: TextStyle(
+                                    labelStyle: const TextStyle(
                                       color: Colors.black87,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
@@ -269,14 +270,14 @@ class _ChangePasswordState extends State<ChangePassword> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 50,
                               ),
                               ElevatedButton(
                                   onPressed: () async {
-                                    Navigator.push(
+                                    Navigator.pushReplacement(
                                       context,
-                                      MaterialPageRoute(builder: (context) => PasswordChanged()),
+                                      MaterialPageRoute(builder: (context) => const AccountPasswordChanged()),
                                     );
                                     // Check if both password fields are not empty
                                     if (_newPasswordcontroller
@@ -315,7 +316,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                                     fixedSize: Size(screenWidth * 0.9, 70),
                                   ),
                                   child: _pageloading
-                                      ? CircularProgressIndicator() // Show circular progress indicator when button is clicked
+                                      ? const CircularProgressIndicator() // Show circular progress indicator when button is clicked
                                       : const Text('Submit',
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
