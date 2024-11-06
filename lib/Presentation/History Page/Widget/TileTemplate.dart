@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
-import '../../Comfimation Page/Widgets/TitleNameTemplate.dart';
+import '../../../Common/Widgets/TitleNameTemplate.dart';
 
 class VisitorTokenTile extends StatelessWidget {
   final String qrData;

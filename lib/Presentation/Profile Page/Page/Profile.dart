@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
-import 'package:touchqueue_app/Presentation/Pages/Password%20Change%20Page/Pages/AccountChangePassword.dart';
+import 'package:touchqueue_app/Presentation/Password%20Change%20Page/Pages/AccountChangePassword.dart';
 
 import '../../../../Common/Widgets/CustomButton.dart';
-import '../../History Page/Page/History.dart';
+import '../../History Page/Page/TokenHistory.dart';
 import '../../Login Page/Page/Login.dart';
 
 class Profile extends StatelessWidget {

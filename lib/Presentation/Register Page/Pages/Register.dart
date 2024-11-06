@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:footer/footer.dart';
 import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
-import 'package:touchqueue_app/Presentation/Pages/Register%20Page/Pages/OTPVerfication.dart';
+import 'package:touchqueue_app/Presentation/Register%20Page/Pages/OTPVerfication.dart';
 import '../../../../Common/Widgets/internetconnectioncheck.dart';
 import '../../Login Page/Page/Login.dart';
 import '../Widgets/CustomField.dart';

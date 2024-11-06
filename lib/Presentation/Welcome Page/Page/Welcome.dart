@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
-import 'package:touchqueue_app/Presentation/Pages/Register%20Page/Pages/Register.dart';
+import 'package:touchqueue_app/Presentation/Register%20Page/Pages/Register.dart';
 
 import '../../Login Page/Page/Login.dart';
 

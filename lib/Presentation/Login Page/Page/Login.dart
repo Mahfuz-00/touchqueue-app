@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:footer/footer.dart';
 import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
-import 'package:touchqueue_app/Presentation/Pages/Landing%20Page/Page/Landing.dart';
-import 'package:touchqueue_app/Presentation/Pages/Register%20Page/Pages/Register.dart';
+import 'package:touchqueue_app/Presentation/Landing%20Page/Page/Landing.dart';
+import 'package:touchqueue_app/Presentation/Register%20Page/Pages/Register.dart';
 
 import '../../../../Common/Widgets/internetconnectioncheck.dart';
 import '../../Forget Password Page/Pages/Forgotpassword.dart';

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:touchqueue_app/Common/Widgets/internetconnectioncheck.dart';
 import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
-import 'package:touchqueue_app/Presentation/Pages/Comfimation%20Page/Widgets/TitleNameTemplate.dart';
+import 'package:touchqueue_app/Common/Widgets/TitleNameTemplate.dart';
 
 import '../../Login Page/Page/Login.dart';
 import '../../Profile Page/Page/Profile.dart';

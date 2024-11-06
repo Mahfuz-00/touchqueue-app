@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:touchqueue_app/Common/Widgets/internetconnectioncheck.dart';
 import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
 import '../../Comfimation Page/Page/Confimation.dart';
-import '../../History Page/Page/History.dart';
+import '../../History Page/Page/TokenHistory.dart';
 import '../../Login Page/Page/Login.dart';
 import '../../Profile Page/Page/Profile.dart';
 import '../../../../Common/Widgets/CustomButton.dart';
