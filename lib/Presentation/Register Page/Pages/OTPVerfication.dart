@@ -4,7 +4,8 @@ import 'package:footer/footer.dart';
 import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
 import 'package:touchqueue_app/Presentation/Register%20Page/Pages/registered.dart';
 import '../../../../Common/Widgets/internetconnectioncheck.dart';
-import '../Widgets/CustomBox.dart';
+import '../../../Common/Widgets/CustomBox.dart';
+import '../../../Core/Config/theme/app_color.dart';
 
 class OTPVerification extends StatefulWidget {
   const OTPVerification({super.key});
@@ -93,7 +94,7 @@ class _OTPVerificationState extends State<OTPVerification> {
     final screenHeight = MediaQuery.of(context).size.height;
     return _isLoading
         ? Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.lightBackground,
       body: Center(
         // Show circular loading indicator while waiting
         child: CircularProgressIndicator(),
@@ -107,7 +108,7 @@ class _OTPVerificationState extends State<OTPVerification> {
               width: double.infinity,
               height: double.infinity,
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.background,
+                color: AppColors.lightBackground,
                 image: DecorationImage(
                   image: AssetImage(AppImages.LightBG),
                   fit: BoxFit.cover, // Use BoxFit.cover to cover the entire screen
@@ -124,7 +125,7 @@ class _OTPVerificationState extends State<OTPVerification> {
                         padding: EdgeInsets.only(left: 8),
                         decoration: BoxDecoration(
                           border: Border.all(
-                              color: Theme.of(context).colorScheme.onPrimary,
+                              color: AppColors.primary,
                               width: 2),
                           // Border properties
                           borderRadius: BorderRadius.circular(
@@ -140,7 +141,7 @@ class _OTPVerificationState extends State<OTPVerification> {
                           iconSize: 30,
                           padding: EdgeInsets.all(10),
                           splashRadius: 30,
-                          color: Theme.of(context).colorScheme.onPrimary,
+                          color: AppColors.primary,
                           splashColor: Colors.grey,
                           highlightColor: Colors.transparent,
                           hoverColor: Colors.transparent,
@@ -167,7 +168,7 @@ class _OTPVerificationState extends State<OTPVerification> {
                                 'OTP Verification',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    color: Theme.of(context).colorScheme.onPrimary,
+                                    color: AppColors.primary,
                                     fontSize: 25,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: 'default'),
@@ -180,7 +181,7 @@ class _OTPVerificationState extends State<OTPVerification> {
                                   'Enter the Verification code we just sent on your email address',
                                   textAlign: TextAlign.center,
                                   style: const TextStyle(
-                                    color: Color.fromRGBO(143, 150, 158, 1),
+                                    color: AppColors.grey,
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: 'default',
@@ -246,7 +247,7 @@ class _OTPVerificationState extends State<OTPVerification> {
                                   },
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor:
-                                    Theme.of(context).colorScheme.onPrimary,
+                                    AppColors.primary,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10),
                                     ),
@@ -259,7 +260,7 @@ class _OTPVerificationState extends State<OTPVerification> {
                                       style: TextStyle(
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.white,
+                                        color: AppColors.lightBackground,
                                         fontFamily: 'default',
                                       ))),
                             ],
@@ -282,7 +283,7 @@ class _OTPVerificationState extends State<OTPVerification> {
                                 'Didn\'t recived code?  ',
                                 textAlign: TextAlign.center,
                                 style: const TextStyle(
-                                  color: Color.fromRGBO(143, 150, 158, 1),
+                                  color: AppColors.grey,
                                   fontSize: 15,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'default',
@@ -303,7 +304,7 @@ class _OTPVerificationState extends State<OTPVerification> {
                                   'Resend',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    color: Theme.of(context).colorScheme.onPrimary,
+                                    color: AppColors.primary,
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: 'default',

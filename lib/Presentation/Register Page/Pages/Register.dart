@@ -5,6 +5,7 @@ import 'package:footer/footer.dart';
 import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
 import 'package:touchqueue_app/Presentation/Register%20Page/Pages/OTPVerfication.dart';
 import '../../../../Common/Widgets/internetconnectioncheck.dart';
+import '../../../Core/Config/theme/app_color.dart';
 import '../../Login Page/Page/Login.dart';
 import '../Widgets/CustomField.dart';
 
@@ -69,7 +70,7 @@ class _RegisterState extends State<Register> {
           child: SafeArea(
             child: Container(
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.background,
+                color: AppColors.lightBackground,
                 image: DecorationImage(
                   image: AssetImage(AppImages.LightBG),
                   fit: BoxFit.cover, // Use BoxFit.cover to cover the entire screen
@@ -94,7 +95,7 @@ class _RegisterState extends State<Register> {
                             'Register',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Theme.of(context).colorScheme.onPrimary,
+                              color: AppColors.primary,
                               fontSize: 25,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'default',
@@ -105,7 +106,7 @@ class _RegisterState extends State<Register> {
                             'Register to get started!',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Color.fromRGBO(143, 150, 158, 1),
+                              color: AppColors.grey,
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'default',
@@ -215,7 +216,7 @@ class _RegisterState extends State<Register> {
                           ElevatedButton(
                               onPressed: _registerUser,
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Theme.of(context).colorScheme.onPrimary,
+                                backgroundColor: AppColors.primary,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
@@ -247,7 +248,7 @@ class _RegisterState extends State<Register> {
                                 'Already have an account?  ',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  color: Color.fromRGBO(143, 150, 158, 1),
+                                  color: AppColors.grey,
                                   fontSize: 15,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'default',
@@ -264,7 +265,7 @@ class _RegisterState extends State<Register> {
                                   'Login now',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    color: Theme.of(context).colorScheme.onPrimary,
+                                    color: AppColors.primary,
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: 'default',
@@ -411,7 +412,7 @@ class _RegisterState extends State<Register> {
             "Error",
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Color.fromRGBO(13, 70, 127, 1),
+              color: AppColors.primary,
               fontWeight: FontWeight.bold,
               fontFamily: 'default',
               fontSize: 22,

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
 import 'package:touchqueue_app/Presentation/Register%20Page/Pages/Register.dart';
 
+import '../../../Core/Config/theme/app_color.dart';
 import '../../Login Page/Page/Login.dart';
 
 class Welcome extends StatelessWidget {
@@ -19,7 +20,7 @@ class Welcome extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.background,
+          color: AppColors.lightBackground,
           image: DecorationImage(
             image: AssetImage(AppImages.LightBG),
             fit: BoxFit.cover, // Use BoxFit.cover to cover the entire screen
@@ -60,11 +61,11 @@ class Welcome extends StatelessWidget {
                           const Login()));
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Theme.of(context).colorScheme.onPrimary,
+                  backgroundColor: AppColors.primary,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                     side: BorderSide(
-                        color: Theme.of(context).colorScheme.onPrimary,
+                        color: AppColors.primary,
                         width: 2),
                   ),
                   fixedSize: Size(screenWidth * 0.9, 70),
@@ -89,12 +90,12 @@ class Welcome extends StatelessWidget {
                           const Register()));
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
+                  backgroundColor: AppColors.lightBackground,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                     side: BorderSide(
                         width: 2,
-                        color: Theme.of(context).colorScheme.onPrimary),
+                        color: AppColors.primary),
                   ),
                   fixedSize: Size(screenWidth * 0.9, 70),
                 ),
@@ -103,7 +104,7 @@ class Welcome extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Theme.of(context).colorScheme.onPrimary,
+                      color: AppColors.primary,
                       fontFamily: 'default',
                     ))),
           ],

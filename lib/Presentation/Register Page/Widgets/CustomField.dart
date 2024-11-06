@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../../../Core/Config/theme/app_color.dart';
 import 'CustomOverlay.dart';
 
 class CustomTextFormField extends StatelessWidget {
@@ -50,14 +51,14 @@ class CustomTextFormField extends StatelessWidget {
             obscureText: obscureText ?? false,
             readOnly: readOnly,
             style: const TextStyle(
-              color: Color.fromRGBO(143, 150, 158, 1),
+              color: AppColors.grey,
               fontSize: 16,
               fontWeight: FontWeight.bold,
               fontFamily: 'default',
             ),
             decoration: InputDecoration(
               filled: true,
-              fillColor: Colors.white,
+              fillColor: AppColors.lightBackground,
               labelText: labelText,
               labelStyle: const TextStyle(
                 color: Colors.black,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
 import '../../../../Common/Widgets/internetconnectioncheck.dart';
+import '../../../Core/Config/theme/app_color.dart';
 import '../../Login Page/Page/Login.dart';
 
 class Registered extends StatefulWidget {
@@ -24,7 +25,7 @@ class _RegisteredState extends State<Registered> {
             width: double.infinity,
             height: double.infinity,
             decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.background,
+              color: AppColors.lightBackground,
               image: DecorationImage(
                 image: AssetImage(AppImages.LightBG),
                 fit: BoxFit.cover, // Use BoxFit.cover to cover the entire screen
@@ -60,7 +61,7 @@ class _RegisteredState extends State<Registered> {
                     'Your account has been changed registered',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Color.fromRGBO(143, 150, 158, 1),
+                      color: AppColors.grey,
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'default',
@@ -79,7 +80,7 @@ class _RegisteredState extends State<Registered> {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Theme.of(context).colorScheme.onPrimary,
+                      backgroundColor: AppColors.primary,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),

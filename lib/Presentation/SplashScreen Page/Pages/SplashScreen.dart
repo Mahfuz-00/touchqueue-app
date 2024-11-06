@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
 import 'package:touchqueue_app/Core/Config/assets/app_image.dart';
+import 'package:touchqueue_app/Core/Config/theme/app_color.dart';
 
 import '../../Welcome Page/Page/Welcome.dart';
 
@@ -61,7 +62,7 @@ class _SplashScreenState extends State<SplashScreen>
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.background,
+          color: AppColors.lightBackground,
           image: DecorationImage(
             image: AssetImage(AppImages.LightBG),
             fit: BoxFit.cover, // Use BoxFit.cover to cover the entire screen
